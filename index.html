@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+#current_member_of {
+  fill: green;
+}
+
+.link.current_member_of {
+  stroke: green;
+}
+
+.link.related_to {
+  stroke-dasharray: 0,2 1;
+}
+
+circle {
+  fill: #ccc;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
+text {
+  font: 10px sans-serif;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+// http://blog.thomsonreuters.com/index.php/mobile-patent-suits-graphic-of-the-day/
+var links = [
+  {source: "Mason Porter", type: "current_member_of", target: "Polytype"},
+  {source: "TJ Nokleby", type: "current_member_of", target: "Polytype"},
+  {source: "TJ Nokleby", type: "current_member_of", target: "Parlor Hawk"},
+  {source: "Mark Garbett", type: "current_member_of", target: "Parlor Hawk"},
+  {source: "Mark Garbett", type: "current_member_of", target: "The Moth & The Flame"},
+  {source: "Mark Garbett", type: "previous_member_of", target: "Somber Party"},
+  {source: "Kyle Henderson", type: "current_member_of", target: "Desert Noises"},
+  {source: "Katie Henderson", type: "current_member_of", target: "Blue Aces"},
+  {source: "Kyle Henderson", type: "related_to", target: "Katie Henderson"},
+  {source: "Pat Boyer", type: "previous_member_of", target: "Gypsy Cab"},
+  {source: "Pat Boyer", type: "current_member_of", target: "Desert Noises"},
+  {source: "Tyler Osmond", type: "current_member_of", target: "Desert Noises"},
+  {source: "Brennan Allen", type: "current_member_of", target: "Desert Noises"},
+  {source: "Tim George", type: "current_member_of", target: "Timmy The Teeth"},
+  {source: "Tim George", type: "previous_member_of", target: "Desert Noises"},
+  {source: "Tim George", type: "current_member_of", target: "Joshua James"},
+  {source: "Isaac Russell", type: "current_member_of", target: "Joshua James"},
+  {source: "Brandon Robbins", type: "current_member_of", target: "The Moth & The Flame"},
+  {source: "Brandon Robbins", type: "previous_member_of", target: "Somber Party"},
+  {source: "Andrew Tolman", type: "current_member_of", target: "The Moth & The Flame"},
+  {source: "Andrew Tolman", type: "previous_member_of", target: "Imagine Dragons"},
+  {source: "Scott Shepherd", type: "current_member_of", target: "Book on Tape Worm"},
+  {source: "Scott Shepherd", type: "current_member_of", target: "Oceanear"},
+  {source: "Scott Shepherd", type: "previous_member_of", target: "NightNight"},
+  {source: "McKay Stevens", type: "previous_member_of", target: "NightNight"},
+  {source: "McKay Stevens", type: "current_member_of", target: "The Vibrant Sound"},
+  {source: "Nate Pyfer", type: "previous_member_of", target: "NightNight"},
+  {source: "Nate Pyfer", type: "producer_for", target: "The Moth & The Flame"},
+  {source: "Nate Pyfer", type: "producer_for", target: "Parlor Hawk"}
+
+];
+
+var nodes = {};
+
+// Compute the distinct nodes from the links.
+links.forEach(function(link) {
+  link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
+  link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
+});
+
+var width = 960,
+    height = 800;
+
+var force = d3.layout.force()
+    .nodes(d3.values(nodes))
+    .links(links)
+    .size([width, height])
+    .linkDistance(40)
+    .charge(-300)
+    .on("tick", tick)
+    .start();
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+// Per-type markers, as they don't inherit styles.
+svg.append("defs").selectAll("marker")
+    .data(["current_member_of", "related_to", "previous_member_of"])
+  .enter().append("marker")
+    .attr("id", function(d) { return d; })
+    .attr("viewBox", "0 -5 10 10")
+    .attr("refX", 15)
+    .attr("refY", -1.5)
+    .attr("markerWidth", 6)
+    .attr("markerHeight", 6)
+    .attr("orient", "auto")
+  .append("path")
+    .attr("d", "M0,-5L10,0L0,5");
+
+var path = svg.append("g").selectAll("path")
+    .data(force.links())
+  .enter().append("path")
+    .attr("class", function(d) { return "link " + d.type; })
+    .attr("marker-end", function(d) { return "url(#" + d.type + ")"; });
+
+var circle = svg.append("g").selectAll("circle")
+    .data(force.nodes())
+  .enter().append("circle")
+    .attr("r", 6)
+    .call(force.drag);
+
+var text = svg.append("g").selectAll("text")
+    .data(force.nodes())
+  .enter().append("text")
+    .attr("x", 8)
+    .attr("y", ".31em")
+    .text(function(d) { return d.name; });
+
+// Use elliptical arc path segments to doubly-encode directionality.
+function tick() {
+  path.attr("d", linkArc);
+  circle.attr("transform", transform);
+  text.attr("transform", transform);
+}
+
+function linkArc(d) {
+  var dx = d.target.x - d.source.x,
+      dy = d.target.y - d.source.y,
+      dr = Math.sqrt(dx * dx + dy * dy);
+  return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
+}
+
+function transform(d) {
+  return "translate(" + d.x + "," + d.y + ")";
+}
+
+</script>
