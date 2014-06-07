@@ -17,5 +17,8 @@
     "type": "git",
     "url": "git@bitbucket.org:dcheesman/provo-music-scene-tree.git"
   },
-  "author": "Dean Cheesman, Sam Beveridge, Marcos Minond"
+  "author": "Dean Cheesman, Sam Beveridge, Marcos Minond",
+  "engines": {
+    "node": "0.10.x"
+  }
 }
