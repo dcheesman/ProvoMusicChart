@@ -1,4 +1,9 @@
-var connect = require('connect');
-connect.createServer(
-    connect.static(__dirname)
-).listen(5000);
+var express = require('express'),
+    port = Number(process.env.PORT || 5000),
+    app = express();
+
+app.use(express.static(__dirname));
+
+app.listen(port, function () {
+    console.log('listening to on port %s', port);
+});
