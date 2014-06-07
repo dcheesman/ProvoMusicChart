@@ -66,6 +66,13 @@
                   return 6;
                 }
               })
+              .style("fill", function(d){
+                if(d.type === "band"){
+                  return "#EFEFEF";
+                } else {
+                  return "#666666";
+                }
+              })
               .call(force.drag);
 
           var text = svg.append("g").selectAll("text")
