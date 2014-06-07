@@ -4,8 +4,31 @@
   stroke-width: 1.5px;
 }
 
-#current_member_of {
+#current_member_of,
+#legend-cur-member {
   fill: green;
+}
+
+.legend-cur-member {
+    fill: none;
+    stroke-width: 1px;
+    stroke: green;
+}
+
+#legend-past-member,
+#legend-related {
+    fill:black;
+}
+
+.legend-past-member {
+    fill: none;
+    stroke-width: 1px;
+    stroke: black;
+}
+
+.legend-related {
+    stroke: black;
+    stroke-dasharray: 0,2 1;
 }
 
 .link.current_member_of {
@@ -26,4 +49,8 @@ text {
   font: 10px sans-serif;
   pointer-events: none;
   text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+
+body {
+    font-family: "Helvetica",sans-serif;
 }
