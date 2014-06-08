@@ -686,5 +686,408 @@
       "name": "The Abilene Paradox",
       "type": "band"
     }
-  }
-]
+  },
+  {
+    "source":
+        {
+        "name" : "Scott Shepherd",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "The Abeline Paradox",
+        "type" : "band"
+        }
+    },
+
+{
+    "source":
+        {
+        "name" : "Nate Pyfer",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "Code Hero",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Aaron Anderson",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "Polytype",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Aaron Anderson",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "Fictionist",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Spencer Harrison",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "Fictionist",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Spencer Harrison",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "Mideau",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Jesse Turley",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "Mideau",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Jesse Turley",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "Gypsy Cab",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Spencer Peterson",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "Sego",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Spencer Peterson",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "Eyes Lips Eyes",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Nate Pyfer",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "Code Hero",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Scott Shepard",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "The Abilene Paradox",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Josh Dunn",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "The Abilene Paradox",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Josh Dunn",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "Code Hero",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Josh Dunn",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "Location Location",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Marcus Bently",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "Location Location",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Marcus Bently",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "Marcus Bently and the Beat Surrender",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Branden Campbell",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "Marcus Bently and the Beat Surrender",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Cameron Runyan",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "The Devil Whale",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Spencer Peterson",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "The Moth & The Flame",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Cameron Runyan",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "The Matt Lewis Band",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Alex Woods",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "Bat Manors",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Nate Pyfer",
+        "type" : "member"
+        },
+    "type":"previous_member_of",
+    "target":
+        {
+        "name" : "Location Location",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Adam Klopp",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "Bat Manors",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Bret Meisenbach",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "Bat Manors",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Alex Woods",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "Salazar",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Bret Meisenbach",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "Baby Ghosts",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Pat Boyer",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "Baby Ghosts",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Landon Young",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "Coral Bones",
+        "type" : "band"
+        }
+},
+{
+    "source":
+        {
+        "name" : "Landon Young",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "Bat Manors",
+        "type" : "band"
+            }
+},
+{
+    "source":
+    {
+    "name" : "Branden Campbell",
+        "type" : "member"
+        },
+    "type":"current_member_of",
+    "target":
+        {
+        "name" : "Neon Trees",
+        "type" : "band"
+        }
+}]
