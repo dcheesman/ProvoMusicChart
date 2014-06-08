@@ -1,5 +1,5 @@
-provo music scene tree
-======================
+Provo music scene chart
+=======================
 
 ```bash
 npm install

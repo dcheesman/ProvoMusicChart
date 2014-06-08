@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/base.css">
+</head>
+<body>
+    <svg width="200px" height="200px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <marker id="legend-cur-member" markerWidth="13" markerHeight="13" refx="2" refy="6" orient="auto">
+                <path d="M2,2 L2,11 L10,6 L2,2" />
+            </marker>
+            <marker id="legend-past-member" markerWidth="13" markerHeight="13" refx="2" refy="6" orient="auto">
+                <path d="M2,2 L2,11 L10,6 L2,2" />
+            </marker>
+            <marker id="legend-related" markerWidth="13" markerHeight="13" refx="2" refy="6" orient="auto">
+                <path d="M2,2 L2,11 L10,6 L2,2" />
+            </marker>
+        </defs>
+        <path d="M100,10 L150,10" class="legend-cur-member" marker-end="url(#legend-cur-member)"/>
+        <path d="M100,40 L150,40" class="legend-past-member" marker-end="url(#legend-past-member)"/>
+        <path d="M100,70 L150,70" class="legend-related" marker-end="url(#legend-related)"/>
+    </svg>
+    <script type="text/javascript" src="/assets/vendor/d3/d3.min.js"></script>
+    <script type="text/javascript" src="/assets/js/chart.js"></script>
+</body>
+</html>
