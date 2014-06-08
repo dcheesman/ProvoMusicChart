@@ -56,6 +56,16 @@ svg {
   stroke: #13A3A5;
 }
 
+#legend-producer-for,
+.legend-producer-for{
+  fill: #13A53C;
+  stroke: #13A53C;
+}
+
+.link.producer_for{
+  stroke: #13A53C;
+}
+
 .link.related_to {
   stroke-dasharray: 0,2 1;
 }
