@@ -32,22 +32,22 @@ svg {
 .legend-cur-member {
     fill: none;
     stroke-width: 1px;
-    stroke: green;
+    stroke: #13A3A5;
 }
 
 #legend-past-member,
 #legend-related {
-    fill:black;
+    fill: #595959;
 }
 
 .legend-past-member {
     fill: none;
     stroke-width: 1px;
-    stroke: black;
+    stroke: #595959;
 }
 
 .legend-related {
-    stroke: black;
+    stroke: #595959;
     stroke-dasharray: 0,2 1;
 }
 
