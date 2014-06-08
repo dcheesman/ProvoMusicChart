@@ -12,6 +12,7 @@ A7A7A7
 
 body {
   background: #282828;
+  font-family: "Helvetica",sans-serif;
 }
 
 svg {
@@ -30,25 +31,25 @@ svg {
 }
 
 .legend-cur-member {
-    fill: none;
-    stroke-width: 1px;
-    stroke: #13A3A5;
+  fill: none;
+  stroke-width: 1px;
+  stroke: #13A3A5;
 }
 
 #legend-past-member,
 #legend-related {
-    fill: #595959;
+  fill: #595959;
 }
 
 .legend-past-member {
-    fill: none;
-    stroke-width: 1px;
-    stroke: #595959;
+  fill: none;
+  stroke-width: 1px;
+  stroke: #595959;
 }
 
 .legend-related {
-    stroke: #595959;
-    stroke-dasharray: 0,2 1;
+  stroke: #595959;
+  stroke-dasharray: 0,2 1;
 }
 
 .link.current_member_of {
@@ -73,5 +74,4 @@ text {
 }
 
 body {
-    font-family: "Helvetica",sans-serif;
 }
