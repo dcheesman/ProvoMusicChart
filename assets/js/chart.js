@@ -10,8 +10,8 @@ d3.json("/assets/data/band_info.json", function (band_data){
     link.target = nodes[link.target.name] || (nodes[link.target.name] = link.target);
   });
 
-  var width = 960,
-      height = 800;
+  var width = window.innerWidth,
+      height = window.innerHeight;
 
   var force = d3.layout.force()
       .nodes(d3.values(nodes))
@@ -22,9 +22,16 @@ d3.json("/assets/data/band_info.json", function (band_data){
       .on("tick", tick)
       .start();
 
+  // try to resize the force size when the window is resized.
+  window.onresize = function (ev) {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    force.size([width, height]);
+  };
+
   var svg = d3.select("body").append("svg")
-      .attr("width", width)
-      .attr("height", height);
+      .attr("width", '100%')
+      .attr("height", '100%');
 
   var path = svg.append("g").selectAll("path")
       .data(force.links())
@@ -70,4 +77,4 @@ d3.json("/assets/data/band_info.json", function (band_data){
   function transform(d) {
     return "translate(" + d.x + "," + d.y + ")";
   }
-})
+});
