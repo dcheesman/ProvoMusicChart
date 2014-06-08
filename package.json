@@ -12,6 +12,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "deploy": "git push heroku master",
     "postinstall": "./node_modules/bower/bin/bower install --silent",
     "start": "node server.js"
   },
