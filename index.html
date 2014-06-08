@@ -81,13 +81,7 @@
                   return 6;
                 }
               })
-              .style("fill", function(d){
-                if(d.type === "band"){
-                  return "#EFEFEF";
-                } else {
-                  return "#666666";
-                }
-              })
+              .style("fill", "#E54E45")
               .call(force.drag);
 
           var text = svg.append("g").selectAll("text")
@@ -95,6 +89,7 @@
             .enter().append("text")
               .attr("x", 8)
               .attr("y", ".31em")
+              .style("text-anchor", "middle")
               .text(function(d) { return d.name; });
 
           // Use elliptical arc path segments to doubly-encode directionality.

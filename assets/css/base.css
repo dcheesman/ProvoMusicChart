@@ -1,12 +1,28 @@
+/*
+E54E45  Red
+13A3A5  Blue
+
+Greyscale
+F5F5F5
+A7A7A7
+595959
+282828
+0B0B0B
+*/
+
+body {
+  background: #282828;
+}
+
 .link {
   fill: none;
-  stroke: #666;
+  stroke: #595959;
   stroke-width: 1.5px;
 }
 
 #current_member_of,
 #legend-cur-member {
-  fill: green;
+  fill: #13A3A5;
 }
 
 .legend-cur-member {
@@ -32,7 +48,7 @@
 }
 
 .link.current_member_of {
-  stroke: green;
+  stroke: #13A3A5;
 }
 
 .link.related_to {
@@ -41,14 +57,15 @@
 
 circle {
   fill: #ccc;
-  stroke: #333;
+  stroke: #282828;
   stroke-width: 1.5px;
 }
 
 text {
   font: 10px sans-serif;
+  fill: #F5F5F5;
   pointer-events: none;
-  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+  text-shadow: 0 1px 0 #0B0B0B, 1px 0 0 #0B0B0B, 0 -1px 0 #0B0B0B, -1px 0 0 #0B0B0B;
 }
 
 body {
