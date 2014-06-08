@@ -1,0 +1,25 @@
+{
+  "name": "provo-music-scene-tree",
+  "version": "0.0.1",
+  "authors": [
+    "Dean Cheesman",
+    "Sam Beveridge",
+    "Marcos Minond"
+  ],
+  "description": "Music tree showing the relations between provo band members.",
+  "main": "server.js",
+  "homepage": "http://provomusic.herokuapp.com/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.4.8",
+    "crossfilter": "~1.3.7"
+  }
+}
