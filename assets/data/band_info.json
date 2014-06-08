@@ -98,7 +98,7 @@
   "type": "current_member_of",
   "target":
     {
-      "name": "Blue Aces",
+      "name": "The Blue Aces",
       "type": "band"
     }
 },
@@ -696,7 +696,7 @@
     "type":"previous_member_of",
     "target":
         {
-        "name" : "The Abeline Paradox",
+        "name" : "The Abiline Paradox",
         "type" : "band"
         }
     },
@@ -815,32 +815,6 @@
     "target":
         {
         "name" : "Eyes Lips Eyes",
-        "type" : "band"
-        }
-},
-{
-    "source":
-        {
-        "name" : "Nate Pyfer",
-        "type" : "member"
-        },
-    "type":"previous_member_of",
-    "target":
-        {
-        "name" : "Code Hero",
-        "type" : "band"
-        }
-},
-{
-    "source":
-        {
-        "name" : "Scott Shepard",
-        "type" : "member"
-        },
-    "type":"previous_member_of",
-    "target":
-        {
-        "name" : "The Abilene Paradox",
         "type" : "band"
         }
 },
@@ -1090,4 +1064,550 @@
         "name" : "Neon Trees",
         "type" : "band"
         }
+},
+{
+    "source":
+      {
+      "name" : "John Buckner",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Marcus Bently and the Beat Surrender",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "John Buckner",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "VanLadyLove",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "John Buckner",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Spitball",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Cristal Ramirez",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "The Blue Aces",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Cristal Ramirez",
+      "type" : "member"
+      },
+    "type":"related_to",
+    "target":
+      {
+      "name" : "Carlos Ramirez",
+      "type" : "member"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Carlos Ramirez",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Despite Despair",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Ikaika Cox",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Despite Despair",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Brett Barrett",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Despite Despair",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Brett Barrett",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "Lydians",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Brett Meisenbach",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "Lydians",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Ikaika Cox",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "The Troubles",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Ryan Moore",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "The Troubles",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Joey Jackson",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "A Film In The Ballroom",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Joey Jackson",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Less Yes",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Elaine Bradley",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Less Yes",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Elaine Bradley",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "Neon Trees",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Elaine Bradley",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "Neon Trees",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Chris Fallo",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "Mortigi Tempo",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Chris Fallo",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Tamarack",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Brady Bills",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Tamarack",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Brady Bills",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Tamarack",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Brady Bills",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Tamarack",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Brady Bills",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "We Are The Strike",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Collin Sellers",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "Mimi Knowles",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Collin Sellers",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Blind Actuaries",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Ryan King",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Blind Actuaries",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Ryan King",
+      "type" : "member"
+      },
+    "type":"related_to",
+    "target":
+      {
+      "name" : "Eddie King",
+      "type" : "member"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Eddie King",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "The Sugarland Run",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Mike McCaleb",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "The Sugarland Run",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Mason Porter ",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Dandy Lyon ",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Jared Price",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "Polytype",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Jared Price",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "Strange Family",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Jason Gibby",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Polytype",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Jason Gibby ",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Dandy Lyon",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Jared Price",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Dandy Lyon",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Scott Haslam",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Polytype",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Michael Hofer",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Dandy Lyon",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Brad Pew",
+      "type" : "member"
+      },
+    "type":"previous_member_of",
+    "target":
+      {
+      "name" : "Dandy Lyon",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Matt Orr",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "Strange Family",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Garret Williams",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "Strange Family",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Nate Pyfer",
+      "type" : "member"
+      },
+    "type":"producer_for",
+    "target":
+      {
+      "name" : "Polytype",
+      "type" : "band"
+      }
+},
+{
+    "source":
+      {
+      "name" : "Aaron Anderson",
+      "type" : "member"
+      },
+    "type":"current_member_of",
+    "target":
+      {
+      "name" : "Polytype",
+      "type" : "band"
+      }
 }]
