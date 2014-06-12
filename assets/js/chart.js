@@ -13,6 +13,10 @@ d3.json("/assets/data/band_info.json", function (band_data){
   var width = window.innerWidth,
       height = window.innerHeight;
 
+  var zoom_listener = d3.behavior.zoom()
+    .scaleExtent([0.1, 3])
+    .on("zoom", zoom_handler);
+
   var force = d3.layout.force()
       .nodes(d3.values(nodes))
       .links(links)
@@ -30,16 +34,26 @@ d3.json("/assets/data/band_info.json", function (band_data){
   };
 
   var svg = d3.select("body").append("svg")
-      .attr("width", '100%')
-      .attr("height", '100%');
+    .attr("width", '100%')
+    .attr("height", '100%');
 
-  var path = svg.append("g").selectAll("path")
+  var chart_g = svg.append("g")
+    .attr("class", "chart_group");
+
+  function zoom_handler(){
+      chart_g.attr("transform", "translate(" + d3.event.translate +
+        ") scale(" + d3.event.scale + ")");
+    }
+
+  zoom_listener(svg);
+
+  var path = chart_g.append("g").selectAll("path")
       .data(force.links())
     .enter().append("path")
       .attr("class", function(d) { return "link " + d.type; })
       .attr("marker-end", function(d) { return "url(#" + d.type + ")"; });
 
-  var circle = svg.append("g").selectAll("circle")
+  var circle = chart_g.append("g").selectAll("circle")
       .data(force.nodes())
     .enter().append("circle")
       .attr("r", function(d){
@@ -52,7 +66,7 @@ d3.json("/assets/data/band_info.json", function (band_data){
       .style("fill", "#E54E45")
       .call(force.drag);
 
-  var text = svg.append("g").selectAll("text")
+  var text = chart_g.append("g").selectAll("text")
       .data(force.nodes())
     .enter().append("text")
       .attr("x", 8)
