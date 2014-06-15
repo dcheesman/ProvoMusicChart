@@ -78,6 +78,7 @@ circle {
 
 text {
   font: 10px sans-serif;
+  font-weight: 100;
   fill: #F5F5F5;
   pointer-events: none;
   text-shadow: 0 1px 0 #0B0B0B, 1px 0 0 #0B0B0B, 0 -1px 0 #0B0B0B, -1px 0 0 #0B0B0B;
