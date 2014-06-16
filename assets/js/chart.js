@@ -1,5 +1,7 @@
-// http://blog.thomsonreuters.com/index.php/mobile-patent-suits-graphic-of-the-day/
-d3.json("/assets/data/band_info.json", function (band_data){
+d3.json("/datasheet", function (band_data){
+
+  band_data = convert_band_data(band_data);
+
   var links = band_data;
 
   var nodes = {};
@@ -41,8 +43,7 @@ d3.json("/assets/data/band_info.json", function (band_data){
     .attr("class", "chart_group");
 
   function zoom_handler(){
-      console.log(d3.event.sourceEvent.target);
-      if(d3.event.sourceEvent.target.tagName === "svg"){
+    if(d3.event.sourceEvent.target.tagName === "svg"){
         chart_g.attr("transform", "translate(" + d3.event.translate +
         ") scale(" + d3.event.scale + ")");
       }
@@ -94,4 +95,26 @@ d3.json("/assets/data/band_info.json", function (band_data){
   function transform(d) {
     return "translate(" + d.x + "," + d.y + ")";
   }
+
+  function convert_band_data (data){
+    var result = [];
+    _.forEach(data, function (d){
+      var new_entry = {
+        "source":
+          {
+            "name": d.member,
+            "type": "member"
+          },
+        "type": d.relationship,
+        "target":
+          {
+            "name": d.memberband,
+            "type": d.relationship === "related_to" ? "member" : "band"
+          }
+        }
+      result.push(new_entry);
+    });
+    return result;
+  }
+
 });
