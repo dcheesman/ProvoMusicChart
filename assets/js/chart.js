@@ -41,11 +41,12 @@ d3.json("/assets/data/band_info.json", function (band_data){
     .attr("class", "chart_group");
 
   function zoom_handler(){
-      chart_g.attr("transform", "translate(" + d3.event.translate +
+      console.log(d3.event.sourceEvent.target);
+      if(d3.event.sourceEvent.target.tagName === "svg"){
+        chart_g.attr("transform", "translate(" + d3.event.translate +
         ") scale(" + d3.event.scale + ")");
+      }
     }
-
-  zoom_listener(svg);
 
   var path = chart_g.append("g").selectAll("path")
       .data(force.links())
@@ -65,6 +66,8 @@ d3.json("/assets/data/band_info.json", function (band_data){
       })
       .style("fill", "#E54E45")
       .call(force.drag);
+
+  zoom_listener(svg);
 
   var text = chart_g.append("g").selectAll("text")
       .data(force.nodes())
