@@ -19,6 +19,14 @@ svg {
   position: absolute;
 }
 
+a:visited,
+a:hover,
+a:link,
+a:active {
+  font-size: 14px;
+  color: #F5F5F5;
+}
+
 .link {
   fill: none;
   stroke: #595959;
