@@ -35,7 +35,7 @@ d3.json("/datasheet", function (band_data){
     force.size([width, height]);
   };
 
-  var svg = d3.select("body").append("svg")
+  var svg = d3.select(".chart").append("svg")
     .attr("width", '100%')
     .attr("height", '100%');
 

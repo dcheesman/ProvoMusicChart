@@ -16,6 +16,10 @@ app.get('/chart', function (req, res) {
     res.render('chart.html');
 });
 
+app.get('/form', function(req, res) {
+    res.render('form.html');
+});
+
 app.get('/datasheet', function (req, res) {
     var GoogleSpreadsheet = require("google-spreadsheet");
 
