@@ -23,7 +23,7 @@ d3.json("/datasheet", function (band_data){
       .nodes(d3.values(nodes))
       .links(links)
       .size([width, height])
-      .linkDistance(40)
+      .linkDistance(100)
       .charge(-300)
       .on("tick", tick)
       .start();
