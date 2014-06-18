@@ -13,4 +13,4 @@ You can see the data source here: https://docs.google.com/spreadsheet/pub?key=0A
 
 To-Do
 =====
-Since disk read time is consistently < 500ms and a HEAD request to determine the last-modification is >1s serve existing cache immediately and render d3. Once requests complete, update graph if changes are found.
+Since disk read time is consistently < 500ms and a HEAD request to determine the last-modification is >1s: serve existing cache immediately and render d3. Once requests complete, update graph if changes are found.
