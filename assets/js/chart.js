@@ -1,25 +1,19 @@
 var Chart = {
-  init : function(){
-    Chart.getData();
-  },
+  /**
+   * @method getData
+   * Always render the cache, then do a request to the google charts to update
+   * the file if needed for the next request
+   */
   getData: function(){
-    d3.json("/datasheetEager", function (band_data){
-      if(band_data.length > 0) {
-        Chart.drawChart(band_data);
-      }
-      d3.json("/datasheet", function (band_data){
-        if(band_data.new) {
-          Chart.drawChart(band_data.data);
-        }
-      });
+    d3.json("/datasheet", function (band_data) {
+      Chart.drawChart(band_data);
+      d3.json("/update_datasheet", function (band_data) { return; });
     });
   },
-  drawChart : function(band_data){
 
+  drawChart: function(band_data) {
     band_data = convert_band_data(band_data);
-
     var links = band_data;
-
     var nodes = {};
 
     // Compute the distinct nodes from the links.
@@ -116,18 +110,16 @@ var Chart = {
       var result = [];
       _.forEach(data, function (d){
         var new_entry = {
-          "source":
-            {
-              "name": d.member,
-              "type": "member"
-            },
+          "source": {
+            "name": d.member,
+            "type": "member"
+          },
           "type": d.relationship,
-          "target":
-            {
-              "name": d.memberband,
-              "type": d.relationship === "related_to" ? "member" : "band"
-            }
+          "target": {
+            "name": d.memberband,
+            "type": d.relationship === "related_to" ? "member" : "band"
           }
+        };
         result.push(new_entry);
       });
       return result;
@@ -136,4 +128,4 @@ var Chart = {
 
 };
 
-Chart.init();
+Chart.getData();
