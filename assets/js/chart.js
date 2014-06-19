@@ -6,8 +6,14 @@ var Chart = {
    */
   getData: function(){
     d3.json("/datasheet", function (band_data) {
-      Chart.drawChart(band_data);
-      d3.json("/update_datasheet", function (band_data) { return; });
+      if (band_data) {
+        Chart.drawChart(band_data);
+      }
+      d3.json("/update_datasheet", function (new_data) {
+        if (!band_data) {
+          Chart.drawChart(new_data);
+        }
+      });
     });
   },
 

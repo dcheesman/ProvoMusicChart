@@ -27,7 +27,7 @@ app.get('/datasheet', function (req, res) {
     res.write(JSON.stringify({}));
     res.end();
   } else {
-    cachedData = require(cacheFile);
+    cachedData = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'));
     cacheModified = cachedData.lastModified;
     res.write(JSON.stringify(cachedData.data));
     res.end();
