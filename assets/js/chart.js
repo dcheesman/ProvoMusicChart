@@ -12,12 +12,16 @@ var Chart = {
   },
 
   drawChart: function(band_data) {
-    band_data = convert_band_data(band_data);
-    var links = band_data;
+    band_data_cf = crossfilter( convert_band_data(band_data) );
+
+    this.links = band_data_cf.dimension(function (d) {
+      return d;
+    });
+
     var nodes = {};
 
     // Compute the distinct nodes from the links.
-    links.forEach(function(link) {
+    this.links.top(Infinity).forEach(function(link) {
       link.source = nodes[link.source.name] || (nodes[link.source.name] = link.source);
       link.target = nodes[link.target.name] || (nodes[link.target.name] = link.target);
     });
@@ -31,7 +35,7 @@ var Chart = {
 
     var force = d3.layout.force()
       .nodes(d3.values(nodes))
-      .links(links)
+      .links(this.links.top(Infinity))
       .size([width, height])
       .linkDistance(100)
       .charge(-300)
@@ -64,6 +68,7 @@ var Chart = {
       .enter().append("path")
         .attr("class", function(d) { return "link " + d.type; })
         .attr("marker-end", function(d) { return "url(#" + d.type + ")"; });
+
 
     var circle = chart_g.append("g").selectAll("circle")
         .data(force.nodes())
@@ -125,6 +130,11 @@ var Chart = {
       return result;
     }
   },
+  filterChart : function(link_type){
+    this.links.filter(function(d){
+      return d.type === link_type;
+    })
+  }
 
 };
 
